@@ -40,7 +40,7 @@ export default class HomeContainer extends Component {
                             source={questions[this.state.index].source}
                             style={styles.imageContainer}
                         />
-                    </View> : <Image source={require('../Assets/greetings.jpg')} style ={styles.imageContainer2}/>}
+                    </View> : <Image source={questions[this.state.index].source} style ={styles.imageContainer2}/>}
 
                 <ScrollView 
                     contentContainerStyle={styles.questionContainer}
@@ -77,13 +77,17 @@ export default class HomeContainer extends Component {
 const questions = [
 
     {
-        name: 'What do you think?',
-        gif: require('../videos/demo.gif'),
+        gif: 'What do you think?',
+        source: require('../videos/demo.gif'),
     },
     {
-        name: 'How are you today?',
-        picture: require('../Assets/greetings.jpg')
+        parking: 'Parking spot',
+        source: require('../videos/output.gif'),
     },
+    {
+        greeting: 'How are you today?',
+        source: require('../Assets/greetings.jpg'),
+    }
 
 ]
 
@@ -136,6 +140,7 @@ const styles = StyleSheet.create({
         imageContainer2: {
         borderRadius: 30, 
         width: (Dimensions.get('window').width),
+        height: (Dimensions.get('window').height) / 2,
         justifyContent: 'center',
         alignItems: 'center',
     },
