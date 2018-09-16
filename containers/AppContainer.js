@@ -3,6 +3,7 @@ import { View } from "react-native"
 import { StackNavigator, createBottomTabNavigator } from 'react-navigation'
 import HomeContainer from '../containers/HomeContainer'
 import InboxContainer from '../containers/InboxContainer'
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 
 class AppContainer extends Component {
@@ -28,10 +29,23 @@ const InboxStack = StackNavigator({
     }
 });
 
-const TabNavigator = createBottomTabNavigator({
-    Home: HomeStack,
-    Inbox: InboxStack,
-})
+const TabNavigator = createBottomTabNavigator(
+    {
+        Home: HomeStack,
+        Inbox: InboxStack,
+    },{
+        navigationOptions: ({ navigation }) => ({
+          tabBarIcon: ({ focused, tintColor }) => {
+            const { routeName } = navigation.state;
+            return <Icon name={routeName.toLowerCase()} size={25} color={tintColor} />;
+          },
+        }),
+        tabBarOptions: {
+          activeTintColor: 'blue',
+          inactiveTintColor: 'gray',
+        },
+    }
+)
 
 import {bindActionCreators} from 'redux';
 import { connect } from 'react-redux';
