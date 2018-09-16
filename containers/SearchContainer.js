@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, ScrollView, Dimensions, Text, TextInput, Image, FlatList } from "react-native"
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { InstantSearch } from 'react-instantsearch-native';
 import { 
+    InstantSearch,
     connectInfiniteHits, 
     connectSearchBox,
     connectHighlight,
@@ -12,15 +12,17 @@ export default class SearchContainer extends Component {
 
     static navigationOptions = ({ navigation }) => {
         return {
-            title: '',
+            title: 'Contact',
         }
     }
 
     constructor(props) {
         super(props)
 
+        this.categoryFilter = this.props.navigation.getParam('category')
+
         this.state = {
-            text: ''
+            text: this.categoryFilter
         }
     }
 
@@ -36,7 +38,7 @@ export default class SearchContainer extends Component {
                         flexDirection: 'row',
                     }}
                 >
-                    <SearchBox />
+                    <SearchBox/>
                 </View>
                 <Hits/>
             </InstantSearch>

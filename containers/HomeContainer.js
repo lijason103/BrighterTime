@@ -22,6 +22,7 @@ export default class HomeContainer extends Component {
         this.setState({
             text: ''
         })
+        // getResponse()
     }
 
     render() {
@@ -50,10 +51,11 @@ export default class HomeContainer extends Component {
                             </View>
 
                             <View style = {{paddingTop: 10}}>
-                                <TouchableOpacity onPress={() => this.testing()}>
-                                            {this.state.text !== '' ? <View style = {styles.buttonContainer}>
-                                                <Text style = {{paddingTop: 10, fontWeight: 'bold'}}>SUBMIT</Text></View> : null}
-                                     
+                                <TouchableOpacity 
+                                    onPress={() => this.testing()}>
+                                    {this.state.text !== '' ? <View style = {styles.buttonContainer}>
+                                            <Text style = {{paddingTop: 10, fontWeight: 'bold'}}>SUBMIT</Text>
+                                        </View> : null}
                                 </TouchableOpacity>
                             </View>
 
@@ -63,6 +65,26 @@ export default class HomeContainer extends Component {
         </View>
     }
 }
+
+// const getResponse = (param) => {
+//     return fetch('104.248.71.161:8888', {
+//         method: 'POST',
+//         headers: {
+//             Accept: 'application/json',
+//             'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify({
+//             firstParam: 'yourValue',
+//             secondParam: 'yourOtherValue',
+//         }),
+//     }).then((response) => response.json())
+//     .then((responseJson) => {
+//       return responseJson.movies;
+//     })
+//     .catch((error) => {
+//       console.error(error);
+//     });
+// }
 
 const winHeight = Dimensions.get('window').height
 const winWidth = Dimensions.get('window').width

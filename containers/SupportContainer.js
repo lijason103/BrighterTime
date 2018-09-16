@@ -19,12 +19,14 @@ export default class SupportContainer extends Component {
     }
 
     _renderCategories(name, description, key) {
+        let category = name !== 'General' ? name : ''
         return <TouchableOpacity 
             key={key}
             style={styles.card}
             onPress={() => {
                 this.props.navigation.navigate('SearchScreen', {
-                    key: 'SupportToSearch'
+                    key: 'SupportToSearch',
+                    category
                 })
             }}
         >

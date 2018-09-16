@@ -30,7 +30,7 @@ export default class WallContainer extends Component {
             alignItems: 'center',
         }, this.props.style]}>
             <Image
-                source={require('../Assets/pin.png')}
+                source={pinset[getRandomNumber(pinset.length-1, 0)]}
                 style={{width: 20, height: 20, marginBottom: 10}}
             />
             <Text>{this.props.message}</Text>
@@ -53,7 +53,7 @@ export default class WallContainer extends Component {
             onPress={() => this.props.onPress()}
         >
             <Image
-                source={require('../Assets/pin.png')}
+                source={pinset[getRandomNumber(pinset.length-1, 0)]}
                 style={{width: 20, height: 20, marginBottom: 30}}
             />
             <Text>{this.props.message}</Text>
@@ -65,6 +65,18 @@ export default class WallContainer extends Component {
     }
 }
 
-const styles = StyleSheet.create({
-})
+const getRandomNumber = (max, min) => {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+const pinset = [
+    require('../Assets/pins/pin1.png'),
+    require('../Assets/pins/pin2.png'),
+    require('../Assets/pins/pin3.png'),
+    require('../Assets/pins/pin4.png'),
+    require('../Assets/pins/pin5.png'),
+    require('../Assets/pins/pin6.png'),
+    require('../Assets/pins/pin7.png'),
+    require('../Assets/pins/pin8.png'),
+]
 
