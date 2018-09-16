@@ -51,7 +51,6 @@ const categories = [
     {
         name: 'Psychiatrist',
         description: 'Provides medication very rare they provide counseling',
-        url: require('../Assets/psychiatrist.jpg'),
     },{
         name: 'Pyschologist',
         description: 'Can often provide counseling',
@@ -67,11 +66,11 @@ const categories = [
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#009faf',
+        backgroundColor: '#EEEEEE',
         padding: 10,
     },
     card: {
-        backgroundColor: '#4dd0e1',
+        backgroundColor: 'white',
         flex: 1,
         borderRadius: 10,
         justifyContent: 'center',

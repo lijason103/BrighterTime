@@ -92,7 +92,7 @@ const winWidth = Dimensions.get('window').width
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#009faf',
+        backgroundColor: '#EEEEEE',
     },
     videoContainer: {
         backgroundColor: 'transparent',
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     textContainer: {
-        backgroundColor: '#4dd0e1',
+        backgroundColor: '#FFEB3B',
         height: 100, 
         width: winWidth - 30, 
         borderWidth: 10, 
