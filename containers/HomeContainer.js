@@ -21,7 +21,7 @@ export default class HomeContainer extends Component {
 
     testing() {
         getResponse(`uid=1&message=${this.state.text}`).then(result => {
-            alert("Thanks for sharing!")
+            alert(`Thanks for sharing! Score: ${result.score}`)
         })
         this.setState({
             text: '',
