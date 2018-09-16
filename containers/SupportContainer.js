@@ -29,7 +29,7 @@ export default class SupportContainer extends Component {
                 })
             }}
         >
-            <Text>{name}</Text>
+            <Text style={{fontSize: 18, fontWeight: 'bold', marginBottom: 5}}>{name}</Text>
             <Text>{description}</Text>
         </TouchableOpacity>
     }
@@ -37,7 +37,7 @@ export default class SupportContainer extends Component {
     render() {
         return <View style={styles.container}>
             <View style={styles.headerContent}>
-                <Text style = {{fontSize: 32, fontWeight: 'bold'}}>Who are you looking for?</Text>
+                <Text style = {{fontSize: 30, fontWeight: 'bold'}}>Who are you looking for?</Text>
             </View>
             {categories.map((category, key) => {
                 return this._renderCategories(category.name, category.description, key)

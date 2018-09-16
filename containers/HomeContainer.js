@@ -21,9 +21,7 @@ export default class HomeContainer extends Component {
 
     testing() {
         getResponse(`uid=1&message=${this.state.text}`).then(result => {
-            if (result.score < 0) {
-                alert(`Your score is ${result.score}`)
-            }
+            alert("Thanks for sharing!")
         })
         this.setState({
             text: '',
@@ -60,10 +58,12 @@ export default class HomeContainer extends Component {
 
                             <View style = {{paddingTop: 10}}>
                                 <TouchableOpacity 
-                                    onPress={() => this.testing()}>
-                                    {this.state.text !== '' ? <View style = {styles.buttonContainer}>
-                                            <Text style = {{paddingTop: 10, fontWeight: 'bold'}}>SUBMIT</Text>
-                                        </View> : null}
+                                    onPress={() => this.testing()}
+                                    disabled={this.state.text === ''}
+                                >
+                                    <View style = {styles.buttonContainer}>
+                                        <Text style = {{paddingTop: 10, fontWeight: 'bold'}}>SUBMIT</Text>
+                                    </View>
                                 </TouchableOpacity>
                             </View>
 
@@ -130,10 +130,9 @@ const styles = StyleSheet.create({
         height: 100,
         alignItems: 'center',
         paddingTop: 20,
-        borderRadius: 20,
     },
     imageContainer: {
-        borderRadius: 30, 
+        borderRadius: 10, 
         width: (Dimensions.get('window').width + 100) / 2,
         justifyContent: 'center',
     },
@@ -150,7 +149,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     textContainer: {
-        backgroundColor: '#FFEB3B',
+        backgroundColor: '#03A9F4',
         height: 100, 
         width: winWidth - 30, 
         borderWidth: 10, 
