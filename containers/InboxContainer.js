@@ -33,31 +33,27 @@ export default class InboxContainer extends Component {
 }
 
 const list = [
-
-	{
-		name: 'Doctor Ana',
-		subtitle: 'Please contact me, so I can help you',
-		url: require('../Assets/Avatars/doctor_ana.jpg')
-	},
-
-	{
-		name: 'Doctor Peter',
-		subtitle: 'Please contact me, so I can help you',
-		url: require('../Assets/Avatars/doctor_peter.png')
-	},
-
-	{
-		name: 'Doctor Phil',
-		subtitle: 'Please contact me, so I can help you',
-		url: require('../Assets/Avatars/doctor_phil.jpg')
-	},
-
-	{
-		name: 'Doctor Uri',
-		subtitle: 'Please contact me, so I can help you',
-		url: require('../Assets/Avatars/doctor_uri.jpg')
-	},
-
+    
+    {
+        name: 'Doctor Ana',    
+        subtitle: 'Please contact me, so I can help you',        
+        url: require('../Assets/Avatars/doctor_ana.jpg')   
+    },     
+    {        
+        name: 'Doctor Peter',        
+        subtitle: 'Hey, I am in the area and available for free chat',        
+        url: require('../Assets/Avatars/doctor_peter.png')    
+    },    
+    {       
+        name: 'Doctor Phil',        
+        subtitle: 'Hi there, I feel that maybe you need some help and you can always get in touch with me, I have been studying depression for 20 years',        
+        url: require('../Assets/Avatars/doctor_phil.jpg')   
+    },     
+    {        
+        name: 'Doctor Uri',        
+        subtitle: 'Hi there, here are some resources that can help: ',       
+        url: require('../Assets/Avatars/doctor_uri.jpg')   
+    },
 ]
 
 const styles = StyleSheet.create({

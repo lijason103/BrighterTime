@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-import { View } from "react-native"
 import { StackNavigator, createBottomTabNavigator } from 'react-navigation'
 import HomeContainer from '../containers/HomeContainer'
 import InboxContainer from '../containers/InboxContainer'
 import WallContainer from '../containers/WallContainer'
+import SupportContainer from '../containers/SupportContainer'
+import SearchContainer from '../containers/SearchContainer'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 
@@ -36,11 +37,21 @@ const WallStack = StackNavigator({
     }
 })
 
+const SupportStack = StackNavigator({
+    SupportScreen: {
+        screen: SupportContainer
+    },
+    SearchScreen: {
+        screen: SearchContainer
+    }
+})
+
 const TabNavigator = createBottomTabNavigator(
     {
         Wall: WallStack,
         Home: HomeStack,
         Inbox: InboxStack,
+        Help: SupportStack,
     },{
         navigationOptions: ({ navigation }) => ({
           tabBarIcon: ({ focused, tintColor }) => {
