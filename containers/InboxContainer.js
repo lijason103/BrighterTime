@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, ScrollView, Text } from "react-native"
+import { StyleSheet, View, ScrollView, Text, Image } from "react-native"
+import { List, ListItem } from 'react-native-elements'
 
 export default class InboxContainer extends Component {
 
@@ -14,13 +15,16 @@ export default class InboxContainer extends Component {
             <ScrollView
                 style={styles.scrollContainer}
             >
-                {list.map((value, index) => {
-                    return <View 
-                        key={index}
-                        style={styles.card}>
-                        <Text>{value}</Text>
-                    </View>
-                })
+                {list.map((l) => (
+                   <ListItem
+                   		roundAvatar
+                   		Image avatar = {l.url}
+                   		key = {l.name}
+                   		title = {l.name}
+                   		subtitle = {l.subtitle}
+                   	/>
+
+                ))
 
                 }
             </ScrollView>
@@ -28,7 +32,33 @@ export default class InboxContainer extends Component {
     }
 }
 
-const list = ['a','b','c','d','e','f']
+const list = [
+
+	{
+		name: 'Doctor Ana',
+		subtitle: 'Please contact me, so I can help you',
+		url: require('../Assets/Avatars/doctor_ana.jpg')
+	},
+
+	{
+		name: 'Doctor Peter',
+		subtitle: 'Please contact me, so I can help you',
+		url: require('../Assets/Avatars/doctor_peter.png')
+	},
+
+	{
+		name: 'Doctor Phil',
+		subtitle: 'Please contact me, so I can help you',
+		url: require('../Assets/Avatars/doctor_phil.jpg')
+	},
+
+	{
+		name: 'Doctor Uri',
+		subtitle: 'Please contact me, so I can help you',
+		url: require('../Assets/Avatars/doctor_uri.jpg')
+	},
+
+]
 
 const styles = StyleSheet.create({
     container: {
@@ -42,5 +72,6 @@ const styles = StyleSheet.create({
         height: 100,
         flex: 1,
         marginBottom: 10,
-    }
+    },
+
 })
