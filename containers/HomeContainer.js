@@ -3,12 +3,12 @@ import { View, StyleSheet, ScrollView, Dimensions, Text, TextInput, Image } from
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export default class HomeContainer extends Component {
- static navigationOptions = ({ navigation }) => {
+
+    static navigationOptions = ({ navigation }) => {
         return {
             title: 'Home page',
         }
     }
-   
 
     constructor(props) {
         super(props)
@@ -30,11 +30,13 @@ export default class HomeContainer extends Component {
                 contentContainerStyle={styles.questionContainer}
             >
                 <Text style={{fontSize: 15}}>Hi there! What are your thoughts on this situation?</Text>
-                <TextInput
-                    style={{height: 100, width: winWidth - 20, borderWidth: 1, borderColor: 'transparent'}}
-                    onChangeText={(text) => this.setState({text})}
-                    maxLength = {200}
-                />
+                <View>
+                    <TextInput
+                        style={{height: 100, width: winWidth - 20, borderWidth: 1, borderColor: 'transparent'}}
+                        onChangeText={(text) => this.setState({text})}
+                        maxLength = {200}
+                    />          
+                </View>
             </ScrollView>
         </View>
     }

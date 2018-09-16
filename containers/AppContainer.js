@@ -3,6 +3,7 @@ import { View } from "react-native"
 import { StackNavigator, createBottomTabNavigator } from 'react-navigation'
 import HomeContainer from '../containers/HomeContainer'
 import InboxContainer from '../containers/InboxContainer'
+import WallContainer from '../containers/WallContainer'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 
@@ -29,8 +30,15 @@ const InboxStack = StackNavigator({
     }
 });
 
+const WallStack = StackNavigator({
+    WallScreen: {
+        screen: WallContainer
+    }
+})
+
 const TabNavigator = createBottomTabNavigator(
     {
+        Wall: WallStack,
         Home: HomeStack,
         Inbox: InboxStack,
     },{
