@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { View } from "react-native"
-import { StackNavigator } from 'react-navigation'
+import { StackNavigator, createBottomTabNavigator } from 'react-navigation'
 import HomeContainer from '../containers/HomeContainer'
+import InboxContainer from '../containers/InboxContainer'
 
 
 class AppContainer extends Component {
@@ -11,15 +12,26 @@ class AppContainer extends Component {
 	}
 
     render() {
-		return <Navigator />
+		return <TabNavigator />
     }
 }
 
-const Navigator = StackNavigator({
+const HomeStack = StackNavigator({
     HomeScreen: { 
         screen: HomeContainer,
     }
 });
+
+const InboxStack = StackNavigator({
+    InboxScreen: { 
+        screen: InboxContainer,
+    }
+});
+
+const TabNavigator = createBottomTabNavigator({
+    Home: HomeStack,
+    Inbox: InboxStack,
+})
 
 import {bindActionCreators} from 'redux';
 import { connect } from 'react-redux';
