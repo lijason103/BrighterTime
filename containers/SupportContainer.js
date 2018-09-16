@@ -36,8 +36,8 @@ export default class SupportContainer extends Component {
 
     render() {
         return <View style={styles.container}>
-            <View style={styles.card}>
-                <Text>Who are you looking for?</Text>
+            <View style={styles.headerContent}>
+                <Text style = {{fontSize: 32, fontWeight: 'bold'}}>Who are you looking for?</Text>
             </View>
             {categories.map((category, key) => {
                 return this._renderCategories(category.name, category.description, key)
@@ -75,6 +75,11 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         marginBottom: 10,
+    },
+    headerContent: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
     }
 
 })

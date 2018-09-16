@@ -20,9 +20,9 @@ class AppContainer extends Component {
 }
 
 const HomeStack = StackNavigator({
-    HomeScreen: { 
+    HomeScreen1: { 
         screen: HomeContainer,
-    }
+    },
 });
 
 const InboxStack = StackNavigator({

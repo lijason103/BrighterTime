@@ -14,7 +14,8 @@ export default class HomeContainer extends Component {
         super(props)
 
         this.state = {
-            text: ''
+            text: '',
+            index: 0,
         }
     }
 
@@ -25,23 +26,27 @@ export default class HomeContainer extends Component {
             }
         })
         this.setState({
-            text: ''
+            text: '',
+            index: this.state.index < questions.length-1 ? this.state.index + 1 : this.state.index
         })
     }
 
     render() {
         return <View style={styles.container}>
-                <View style={styles.videoContainer}>
-                    <Image
-                        source={require('../videos/demo.gif')}
-                        style={styles.imageContainer}
-                    />
-                </View>
+
+                {questions[this.state.index].type === 'gif' ? 
+                    <View style={styles.videoContainer}>
+                        <Image
+                            source={questions[this.state.index].source}
+                            style={styles.imageContainer}
+                        />
+                    </View> : <Image source={require('../Assets/greetings.jpg')} style ={styles.imageContainer2}/>}
+
                 <ScrollView 
                     contentContainerStyle={styles.questionContainer}
                 >
                     <View style = {styles.gameQuestionContainer}>
-                        <Text style={{fontSize: 18, fontWeight: 'bold'}}>Hi there! What are your thoughts on this situation?</Text>
+                        <Text style={{fontSize: 18, fontWeight: 'bold'}}>Hi there! Any comments about this?</Text>
                            
                            <View style = {{paddingTop: 20}}>
                             <TextInput
@@ -90,6 +95,7 @@ const winWidth = Dimensions.get('window').width
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor: '#deeaee',
         backgroundColor: '#EEEEEE',
     },
     videoContainer: {
@@ -113,6 +119,12 @@ const styles = StyleSheet.create({
         borderRadius: 30, 
         width: (Dimensions.get('window').width + 100) / 2,
         justifyContent: 'center',
+    },
+        imageContainer2: {
+        borderRadius: 30, 
+        width: (Dimensions.get('window').width),
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     gameQuestionContainer: {
         alignSelf: 'center',
