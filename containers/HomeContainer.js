@@ -22,7 +22,11 @@ export default class HomeContainer extends Component {
         this.setState({
             text: ''
         })
-        // getResponse()
+        getResponse({uid: 1, message: this.state.text}).then(result => {
+            if (result.score < 0) {
+                alert(`u need help ${result.score}`)
+            }
+        })
     }
 
     render() {
@@ -66,25 +70,21 @@ export default class HomeContainer extends Component {
     }
 }
 
-// const getResponse = (param) => {
-//     return fetch('104.248.71.161:8888', {
-//         method: 'POST',
-//         headers: {
-//             Accept: 'application/json',
-//             'Content-Type': 'application/json',
-//         },
-//         body: JSON.stringify({
-//             firstParam: 'yourValue',
-//             secondParam: 'yourOtherValue',
-//         }),
-//     }).then((response) => response.json())
-//     .then((responseJson) => {
-//       return responseJson.movies;
-//     })
-//     .catch((error) => {
-//       console.error(error);
-//     });
-// }
+async function getResponse (param) {
+    return await fetch('http://104.248.71.161', {
+        method: 'POST',
+        headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(param),
+    }).then((response) => {
+        return JSON.parse(response["_bodyText"])
+    })
+    .catch((error) => {
+        console.warn(error);
+    });
+}
 
 const winHeight = Dimensions.get('window').height
 const winWidth = Dimensions.get('window').width

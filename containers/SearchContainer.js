@@ -116,10 +116,6 @@ const Highlight = connectHighlight(
       return <Text>{highlightedHit}</Text>;
     }
   );
-  
-
-const winHeight = Dimensions.get('window').height
-const winWidth = Dimensions.get('window').width
 
 const styles = StyleSheet.create({
     container: {
