@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, ScrollView, Dimensions, Text, TextInput, Image, ImageBackground, Button, Alert} from "react-native"
+import { View, StyleSheet, ScrollView, Dimensions, Text, TextInput, Image, ImageBackground, TouchableOpacity, Alert} from "react-native"
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export default class HomeContainer extends Component {
 
     static navigationOptions = ({ navigation }) => {
         return {
-            title: 'Home page',
+            title: 'Play Time',
         }
     }
 
@@ -14,17 +14,17 @@ export default class HomeContainer extends Component {
         super(props)
 
         this.state = {
-            text: 'a'
+            text: ''
         }
     }
 
     testing() {
-            // Alert.alert(this.state.text)
-        console.warn(this.state.text)
+        this.setState({
+            text: ''
+        })
     }
 
     render() {
-        console.warn(this.state.text)
         return <View style={styles.container}>
             <ImageBackground source = {require('../Assets/background.jpg')}
                 style = {styles.backgroundContainer}
@@ -39,7 +39,7 @@ export default class HomeContainer extends Component {
                     contentContainerStyle={styles.questionContainer}
                 >
                     <View style = {styles.gameQuestionContainer}>
-                        <Text style={{fontSize: 15, fontWeight: 'bold'}}>Hi there! What are your thoughts on this situation?</Text>
+                        <Text style={{fontSize: 18, fontWeight: 'bold'}}>Hi there! What are your thoughts on this situation?</Text>
                            
                            <View style = {{paddingTop: 20}}>
                             <TextInput
@@ -47,17 +47,16 @@ export default class HomeContainer extends Component {
                                 style={styles.textContainer}
                                 onChangeText={(text) => this.setState({text})}
                                 maxLength = {200}
+                                value={this.state.text}
                             />
                             </View>
 
-                            <View>
-                                <Button
-                                  onPress={this.testing}
-                                  title="Submit"
-                                  color="#841584"
-                                  accessibilityLabel="Learn more about this purple button"
-                                />
-
+                            <View style = {{paddingTop: 10}}>
+                                <TouchableOpacity onPress={() => this.testing()}>
+                                            {this.state.text !== '' ? <View style = {styles.buttonContainer}>
+                                                <Text style = {{paddingTop: 10, fontWeight: 'bold'}}>SUBMIT</Text></View> : null}
+                                     
+                                </TouchableOpacity>
                             </View>
 
                     </View>
@@ -120,6 +119,14 @@ const styles = StyleSheet.create({
     backgroundContainer: {
         width: winWidth,
         height: winHeight,
+    },
+    buttonContainer: {
+        backgroundColor: 'orange',
+        height: 40,
+        width: 250,
+        marginBottom: 30,
+        alignItems: 'center',
+        borderRadius: 15,
     }
 })
 
