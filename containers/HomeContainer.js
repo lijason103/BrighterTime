@@ -22,7 +22,7 @@ export default class HomeContainer extends Component {
     testing() {
         getResponse(`uid=1&message=${this.state.text}`).then(result => {
             if (result.score < 0) {
-                alert(`u need help ${result.score}`)
+                alert(`Your score is ${result.score}`)
             }
         })
         this.setState({
@@ -73,6 +73,19 @@ export default class HomeContainer extends Component {
         </View>
     }
 }
+
+const questions = [
+
+    {
+        name: 'What do you think?',
+        gif: require('../videos/demo.gif'),
+    },
+    {
+        name: 'How are you today?',
+        picture: require('../Assets/greetings.jpg')
+    },
+
+]
 
 async function getResponse (param) {
     return await fetch(`http://104.248.71.161?${param}`, {
