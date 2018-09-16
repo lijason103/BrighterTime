@@ -19,19 +19,18 @@ export default class HomeContainer extends Component {
     }
 
     testing() {
-        this.setState({
-            text: ''
-        })
-        getResponse({uid: 1, message: this.state.text}).then(result => {
+        getResponse(`uid=1&message=${this.state.text}`).then(result => {
             if (result.score < 0) {
                 alert(`u need help ${result.score}`)
             }
+        })
+        this.setState({
+            text: ''
         })
     }
 
     render() {
         return <View style={styles.container}>
-
                 <View style={styles.videoContainer}>
                     <Image
                         source={require('../videos/demo.gif')}
@@ -71,18 +70,17 @@ export default class HomeContainer extends Component {
 }
 
 async function getResponse (param) {
-    return await fetch('http://104.248.71.161', {
+    return await fetch(`http://104.248.71.161?${param}`, {
         method: 'POST',
         headers: {
             Accept: 'application/json',
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify(param),
     }).then((response) => {
         return JSON.parse(response["_bodyText"])
     })
     .catch((error) => {
-        console.warn(error);
+        return {score: 0}
     });
 }
 
