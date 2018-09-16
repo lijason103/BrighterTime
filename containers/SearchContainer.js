@@ -12,7 +12,7 @@ export default class SearchContainer extends Component {
 
     static navigationOptions = ({ navigation }) => {
         return {
-            title: 'Home page',
+            title: '',
         }
     }
 
@@ -122,7 +122,7 @@ const winWidth = Dimensions.get('window').width
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'white',
+        backgroundColor: '#009faf',
     },
     searchBox: {
         height: 60,
@@ -130,6 +130,7 @@ const styles = StyleSheet.create({
         padding: 10,
         margin: 10,
         flex: 1,
+        backgroundColor: '#4dd0e1',
     }
 })
 

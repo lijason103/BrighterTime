@@ -26,9 +26,7 @@ export default class HomeContainer extends Component {
 
     render() {
         return <View style={styles.container}>
-            <ImageBackground source = {require('../Assets/background.jpg')}
-                style = {styles.backgroundContainer}
-            >
+
                 <View style={styles.videoContainer}>
                     <Image
                         source={require('../videos/demo.gif')}
@@ -62,10 +60,6 @@ export default class HomeContainer extends Component {
                     </View>
                 </ScrollView>
 
-                </ImageBackground>
-                
-
-
         </View>
     }
 }
@@ -76,7 +70,7 @@ const winWidth = Dimensions.get('window').width
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'transparent',
+        backgroundColor: '#009faf',
     },
     videoContainer: {
         backgroundColor: 'transparent',
@@ -106,7 +100,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     textContainer: {
-        backgroundColor: '#ffca28',
+        backgroundColor: '#4dd0e1',
         height: 100, 
         width: winWidth - 30, 
         borderWidth: 10, 
