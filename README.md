@@ -10,15 +10,7 @@
 
 ## About
 
-This app was inspired by LumoHacks topic of mental health issues in veterans and first responders. 
-BritherTime has multiple functionalities such as providing a 
-support group for the people at risk of depression while
-keeping it anonymous, confidential, and therapeutic. This app consits of a wall where the users can share their 
-thoughts anonymously. The users can play a game, answer a series of questions about some real 
-life situations and based on their answers, the app will analyze their risk of depression. This app uses 
-machine learning to evaluate the language used in the user responses and rank them based on their risk of depression. 
-The list of users with higher risk will be presented to a group of trained professionals where they 
-can chose to reach out to the user via an emailing system.  
+BrighterTime was inspired by LumoHacks’ topic of mental health issues in veterans and first responders. The app has multiple functionalities such as providing an anonymous, confidential, and therapeutic support group for people who are at risk of depression. It also consists of a “Wall” feature where the users can share their thoughts anonymously. Users can play games while answering a series of questions about real life situations which will be evaluated. BrighterTime incorporates machine learning to determine a user’s risk of depression based on their language and responses. High risk users are presented to a group of trained professionals who optionally reach out to the user via an emailing system.
 
 
 ## Technical 
