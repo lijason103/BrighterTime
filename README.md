@@ -1,25 +1,16 @@
 # BrighterTime
 ## Challenges
-* 1. **Financial and economical challenge with getting proper mental health treatment:** This app offers the users to access resources and mental health professionals for free. These professionals could be volunteers. 
-* 2. **Difficulty searching and accessing resources:** Provides searching on a database of trained professionals using Algolia 
-* 3. **Peer support Connection:** "The Wall" page of the app provides a space for the users to share their thoughts anonymously, also civillians can write thank-you massages  
-* 4. **Simple machine training algorithm:** "The text analysis algorithm can be trained for better occuracy of user's risk by using more scenarios and can be trained to determine to evaluate good/bad helping." 
-* 5. **Messaging and Text Integration:** Using messaging between users and trained professionals via text. 
-* 6. **Detection of drug abuse behaviours:** Various scenarios can be presented to the user and their input can be analysed for using drug related vocabulary. 
-
+* 1. **Financial and economical challengs of accessing proper mental health treatment:** BrighterTime offers users free access to resources and mental health professionals (who may volunteer to use the application).
+* 2. **Difficulty searching for and accessing resources:** The application allows users to search for trained professionals through Algolia.
+* 3. **Peer support Connection:** The "Wall" feature of the app provides a space for the users to share their thoughts anonymously and express their gratitude.
+* 4. **Simple machine training algorithm:** The text analysis algorithm can be trained to accurately determine a user's risk through various scenarios and evaluate the quality of their treatment.
+* 5. **Messaging and text integration:** BrighterTime provides a messaging system for users to professionals and other users via text. 
+* 6. **Detection of drug abuse behaviours:** The application presents the user with various scenarios and analyzes their input to detect drug related vocabulary.
 
 
 ## About
 
-This app was inspired by LumoHacks topic of mental health issues in veterans and first responders. 
-BritherTime has multiple functionalities such as providing a 
-support group for the people at risk of depression while
-keeping it anonymous, confidential, and therapeutic. This app consits of a wall where the users can share their 
-thoughts anonymously. The users can play a game, answer a series of questions about some real 
-life situations and based on their answers, the app will analyze their risk of depression. This app uses 
-machine learning to evaluate the language used in the user responses and rank them based on their risk of depression. 
-The list of users with higher risk will be presented to a group of trained professionals where they 
-can chose to reach out to the user via an emailing system.  
+BrighterTime was inspired by LumoHacks’ topic of mental health issues in veterans and first responders. The app has multiple functionalities such as providing an anonymous, confidential, and therapeutic support group for people who are at risk of depression. It also consists of a “Wall” feature where the users can share their thoughts anonymously. Users can play games while answering a series of questions about real life situations which will be evaluated. BrighterTime incorporates machine learning to determine a user’s risk of depression based on their language and responses. High risk users are presented to a group of trained professionals who optionally reach out to the user via an emailing system.
 
 
 ## Technical 
