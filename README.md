@@ -1,12 +1,11 @@
 # BrighterTime
 ## Challenges
-* 1. **Financial and economical challenge with getting proper mental health treatment:** This app offers the users to access resources and mental health professionals for free. These professionals could be volunteers. 
-* 2. **Difficulty searching and accessing resources:** Provides searching on a database of trained professionals using Algolia 
-* 3. **Peer support Connection:** "The Wall" page of the app provides a space for the users to share their thoughts anonymously, also civillians can write thank-you massages  
-* 4. **Simple machine training algorithm:** "The text analysis algorithm can be trained for better occuracy of user's risk by using more scenarios and can be trained to determine to evaluate good/bad helping." 
-* 5. **Messaging and Text Integration:** Using messaging between users and trained professionals via text. 
-* 6. **Detection of drug abuse behaviours:** Various scenarios can be presented to the user and their input can be analysed for using drug related vocabulary. 
-
+* 1. **Financial and economical challengs of accessing proper mental health treatment:** BrighterTime offers users free access to resources and mental health professionals (who may volunteer to use the application).
+* 2. **Difficulty searching for and accessing resources:** The application allows users to search for trained professionals through Algolia.
+* 3. **Peer support Connection:** The "Wall" feature of the app provides a space for the users to share their thoughts anonymously and express their gratitude.
+* 4. **Simple machine training algorithm:** The text analysis algorithm can be trained to accurately determine a user's risk through various scenarios and evaluate the quality of their treatment.
+* 5. **Messaging and text integration:** BrighterTime provides a messaging system for users to professionals and other users via text. 
+* 6. **Detection of drug abuse behaviours:** The application presents the user with various scenarios and analyzes their input to detect drug related vocabulary.
 
 
 ## About
