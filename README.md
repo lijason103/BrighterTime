@@ -24,19 +24,17 @@ FLASK
 
 
 ## Further Development 
-* 1. A better ML algorithm can be used for text processing 
-* 2. Further research is needed on evaluating accuracy of depression risk based on text phrases
-* 3. Other evaluation games, scenraios can be added 
-* 4. Counsellour and pyschologist search function can be added, database could be expanded based on area and a patient review system could be implemented  
-* 5. Addition of depression based on voice evaluation 
-
+* 1. An improved Machine Learning algorithm can be used for text processing.
+* 2. Further research is needed to determine the accuracy of the given depression risk evaluations based on text phrases.
+* 3. The variety of games and scenarios can be expanded on.
+* 4. A counselor and psychologist search feature can be added.
+* 5. The database can be expanded on based on area.
+* 6. A patient review system can be developed.
+* 7. An additional voice/audio based risk evaluation feature can be added. 
    
 
 ## Requirements 
-IOS 
-
-
-
+IOS
 
 
 ## Contributors
