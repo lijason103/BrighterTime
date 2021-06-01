@@ -54,7 +54,7 @@ six==1.11.0
 SQLAlchemy==1.2.11
 toolz==0.9.0
 traitlets==4.3.2
-urllib3==1.23
+urllib3==1.26.5
 uWSGI==2.0.17.1
 wcwidth==0.1.7
 Werkzeug==0.14.1
