@@ -27,7 +27,7 @@ memory-profiler==0.54.0
 netCDF4==1.4.1
 networkx==2.1
 numexpr==2.6.8
-numpy==1.15.1
+numpy==1.22.0
 pandas==0.23.4
 pandas-datareader==0.7.0
 parso==0.3.1
